@@ -94,8 +94,17 @@ var ingredients = (obj) => {
   Find the smallest number of the three and return that number.
 */
 
-var largeNumbers = () => {
-
+var largeNumbers = (obj) => {
+  const {first, second, third} = obj;
+  if(first < second && first < third) {
+    return first;
+  }
+  if (second < first && second < third) {
+    return second;
+  }
+  if(third < first && third < second) {
+    return third;
+  }
 }
 
 
@@ -108,6 +117,16 @@ var largeNumbers = () => {
   Find the longest array and return that array.
 */
 
-//Code Here
+var numberGroups = (obj) => {
+  const {a, b, c} = obj;
+  if(a.length > b.length && a.length > c.length) {
+    return a;
+  }
+  if(b.length > a.length && b.length > c.length) {
+    return b;
+  } else {
+    return c;
+  }
+}
 
 
